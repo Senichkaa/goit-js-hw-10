@@ -7,21 +7,21 @@ const BASE_URL = 'https://api.thecatapi.com/v1';
 
 export function fetchBreeds() {
   return axios.get(`${BASE_URL}/breeds`).then(response => {
-    if (!response.ok) {
+    if (response.status !== 200) {
       console.log('There is an error while fetching a breed');
       throw new Error(response.statusText);
     }
-    return response.json();
+    return response.data;
   });
 }
 
-export function fetchCatsByBreed(breedId) {
+export function fetchCatByBreed(breedId) {
   const breedUrl = `${BASE_URL}/images/search?breed_ids=${breedId}`;
   return axios.get(breedUrl).then(response => {
-    if (!response.ok) {
+    if (response.status !== 200) {
       console.log('There is an error while fetching a cat');
       throw new Error(response.statusText);
     }
-    return response.json();
+    return response.data;
   });
 }
