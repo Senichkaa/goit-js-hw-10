@@ -1,5 +1,5 @@
 import { fetchBreeds, fetchCatByBreed } from './cat-api.js';
-
+import './styles.css';
 const breedSelect = document.querySelector('.breed-select');
 const catInfo = document.querySelector('.cat-info');
 const loader = document.querySelector('.loader');
@@ -19,11 +19,11 @@ function onSelect(event) {
       let { url, name, description, temperament } = dataInformation;
       console.log(dataInformation);
       catInfo.innerHTML = `
-       <img class="cat-info__cat-img" src="${url}" alt="cat ${name}" width="460px">
-       <div class="cat-info__text-box">
-         <h2 class="cat-info__tittle">${name}</h2>
-         <p class="cat-info__description">${description}</p>
-         <p class="cat-info__temperament"><span class="temperament__header">Temperament:</span> ${temperament}</p>
+       <img class="cat-img" src="${url}" alt="cat ${name}" width="460px">
+       <div class="cat-info-div">
+         <h2 class="cat-title">${name}</h2>
+         <p class="cat-description">${description}</p>
+         <p class="cat-temperament"><span class="cat-temperament-span">Temperament:</span> ${temperament}</p>
        </div>`;
     })
     .catch(error => {
