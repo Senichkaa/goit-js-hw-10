@@ -16,20 +16,23 @@ function onSelect(event) {
   fetchCatByBreed(event.target.value)
     .then(data => {
       let dataInformation = data[0].breeds[0];
-      let { url, name, description, temperament } = dataInformation;
+      let { name, description, temperament } = dataInformation;
       console.log(dataInformation);
+
+      hideLoader();
       catInfo.innerHTML = `
-       <img class="cat-img" src="${url}" alt="cat ${name}" width="460px">
+       <div class="div-cat-wrap">
+       <img class="cat-img" src="${data[0].url}" alt="${name}">
        <div class="cat-info-div">
          <h2 class="cat-title">${name}</h2>
          <p class="cat-description">${description}</p>
          <p class="cat-temperament"><span class="cat-temperament-span">Temperament:</span> ${temperament}</p>
+       </div>
        </div>`;
     })
     .catch(error => {
       showError();
       console.log(error);
-      hideLoader();
     });
 }
 

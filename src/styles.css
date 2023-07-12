@@ -1,7 +1,46 @@
-.cat-img {
-  max-width: 500px;
+img {
+  border: 2px solid aliceblue;
+  max-width: 100%;
+  border-radius: 10px;
 }
+body {
+  background: #e6e4e4;
+}
+select {
+  display: block;
+  margin: 15px auto;
+}
+.breed-select {
+  width: 180px;
+  text-align: center;
+  height: 30px;
+  border: 2px solid aliceblue;
+}
+
 .cat-info {
+  border: 2px solid aliceblue;
+  border-radius: 10px;
+  background-color: rgb(202, 197, 192);
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.div-cat-wrap {
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  gap: 50px;
+}
+.loader,
+.error {
+  text-align: center;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.cat-img {
+  max-width: 600px;
 }
 .cat-title {
   font-weight: 600;
