@@ -15,6 +15,10 @@ select {
   text-align: center;
   height: 30px;
   border: 2px solid aliceblue;
+  background-color: rgb(223, 223, 223);
+}
+option:checked {
+  background-color: beige;
 }
 
 .cat-info {
@@ -46,17 +50,23 @@ select {
   font-weight: 600;
   font-size: 36px;
   text-align: center;
+  line-height: 1.2;
+  letter-spacing: 1.2;
 }
 .cat-description {
   width: 700px;
   margin: 0 auto;
   font-weight: 500;
   font-size: 20px;
+  line-height: 1.1;
+  letter-spacing: 1.05;
 }
 .cat-temperament {
   font-weight: 500;
   font-size: 21px;
   text-align: center;
+  line-height: 1.2;
+  letter-spacing: 1;
 }
 
 .cat-temperament-span {
